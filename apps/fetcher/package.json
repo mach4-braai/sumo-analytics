@@ -1,0 +1,21 @@
+{
+  "name": "@sumo/fetcher",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "seed": "tsx src/index.ts --seed"
+  },
+  "dependencies": {
+    "@sumo/db": "*",
+    "drizzle-orm": "^0.39.0",
+    "node-cron": "^3.0.3",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

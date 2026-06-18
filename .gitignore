@@ -1,3 +1,25 @@
+node_modules
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+
+# Env
+.env
+.env.local
+!.env.example
+
+# OS
 .DS_Store
-Thumbs.db
-*.swp
+
+# TypeScript
+*.tsbuildinfo
+
+# Drizzle
+packages/db/drizzle/meta/
+
+# Debug
+npm-debug.log*

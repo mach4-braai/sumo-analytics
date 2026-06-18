@@ -1,0 +1,45 @@
+[tools]
+node = "22"
+
+[env]
+_.file = ".env"
+
+[tasks.setup]
+description = "Install all dependencies"
+run = "npm install"
+
+[tasks.dev]
+description = "Run the Next.js frontend"
+run = "npm run -w apps/web dev"
+
+[tasks.fetcher]
+description = "Run the data fetcher"
+run = "npm run -w apps/fetcher start"
+
+[tasks."fetcher:seed"]
+description = "Run initial data seed"
+run = "npm run -w apps/fetcher seed"
+
+[tasks."db:up"]
+description = "Start PostgreSQL container"
+run = "docker compose up -d"
+
+[tasks."db:down"]
+description = "Stop PostgreSQL container"
+run = "docker compose down"
+
+[tasks."db:migrate"]
+description = "Run Drizzle migrations"
+run = "npm run -w packages/db migrate"
+
+[tasks."db:generate"]
+description = "Generate Drizzle migrations"
+run = "npm run -w packages/db generate"
+
+[tasks."db:studio"]
+description = "Open Drizzle Studio"
+run = "npm run -w packages/db studio"
+
+[tasks.build]
+description = "Build all packages"
+run = "npm run build --workspaces --if-present"
